@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import PostListFrag from "../../../components/blog/PostListFrag.astro";
+import FormattedDate from "@cmp/FormattedDate.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 
     return uniqueTags.map((tag) => {
         const filteredPosts = allPosts.filter((post) =>
-            post.data.tags.includes(tag),
+            post.data.tags.includes(tag)
         );
         return {
             params: { tag },
@@ -26,15 +26,19 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
-    <p>Posts tagged with <code style="font-size: 120%;">{tag}</code></p>
+    <h2>Posts tagged with <code style="font-size: 120%;">{tag}</code></h2>
+    <a href="/blog/t">See all tags</a>
     <ul>
         {
             posts.map((post) => (
-                <PostListFrag
-                    url={`/blog/${post.slug}/`}
-                    title={post.data.title}
-                    pubDate={post.data.pubDate}
-                />
+                <li>
+                    <FormattedDate date={post.data.pubDate} /> —
+                    <>
+                        <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+                        <br />
+                    </>
+                    {post.data.description}
+                </li>
             ))
         }
     </ul>

@@ -3,9 +3,9 @@ interface Props {
     date: Date;
 }
 
-const { pubDate } = Astro.props;
+const { date } = Astro.props;
 ---
 
-<time date={pubDate.toISOString()}>
-    {pubDate.toISOString().slice(0, 10) || "no date"}
+<time datetime={date.toISOString()}>
+    {date.toISOString().slice(0, 10) || "no date"}
 </time>

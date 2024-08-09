@@ -1,0 +1,13 @@
+---
+import FormattedDate from "@cmp/FormattedDate.astro"
+const {arr} = Astro.props
+---
+
+<li>
+    <FormattedDate date={arr.data.pubDate} /> —
+    <>
+        <a href={`/blog/${arr.slug}`}>{arr.data.title}</a>
+        <br />
+    </>
+    {arr.data.description}
+</li>
