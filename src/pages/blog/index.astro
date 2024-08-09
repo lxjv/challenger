@@ -1,9 +1,7 @@
 ---
-import BlogPostDisplay from "@cmp/blog/BlogPostDisplay.astro";
-import GPTPostList from "@cmp/blog/PostListMini.astro";
+import PostListMini from "@cmp/blog/PostListMini.astro";
 import Button from "../../components/Button.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
-import PostList from "@cmp/blog/PostList.astro";
 
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("blog");
@@ -18,7 +16,7 @@ const pageTitle = "Blog";
 
     <hr style="max-width: 33%;">
 
-    <GPTPostList />
+    <PostListMini />
 </PageLayout>
 
 <style></style>
