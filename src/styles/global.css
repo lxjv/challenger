@@ -38,6 +38,16 @@ html {
     font-size: 110%;
 }
 
+body {
+    max-width: 65%;
+}
+
+@media (min-width: 35rem) {
+    body {
+        max-width: 100%;
+    }
+}
+
 a {
     text-decoration: underline dotted var(--accent);
 }

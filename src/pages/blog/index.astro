@@ -1,12 +1,14 @@
 ---
+import BlogPostDisplay from "@cmp/blog/BlogPostDisplay.astro";
+import GPTPostList from "@cmp/blog/GPTPostList.astro";
 import Button from "../../components/Button.astro";
-import PostListFrag from "../../components/PostListFrag.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
+import PostList from "@cmp/blog/PostList.astro";
 
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("blog");
 
-const pageTitle = "Blooooooooooooooooog";
+const pageTitle = "Blog";
 ---
 
 <PageLayout pageTitle={pageTitle}>
@@ -14,17 +16,9 @@ const pageTitle = "Blooooooooooooooooog";
 
     <Button go="/blog/t" label="Show tag list" />
 
-    <div id="postlist">
-        {
-            allPosts.map((post) => (
-                <PostListFrag
-                    url={`/blog/${post.slug}/`}
-                    title={post.data.title}
-                    pubDate={post.data.pubDate}
-                />
-            ))
-        }
-    </div>
+    <hr style="max-width: 33%;">
+
+    <GPTPostList />
 </PageLayout>
 
 <style></style>
