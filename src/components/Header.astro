@@ -1,0 +1,21 @@
+---
+import Navigation from "./Navigation.astro";
+const { siteTitle } = Astro.props;
+---
+
+<header>
+    <h1><a href="/">{siteTitle}</a></h1>
+    <Navigation />
+</header>
+
+<style>
+    header {
+        margin-bottom: 1em;
+    }
+    h1 {
+        margin-bottom: 5px;
+    }
+    a {
+        text-decoration: none;
+    }
+</style>

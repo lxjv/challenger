@@ -1,16 +1,64 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Home";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <span
+        class="h-card center"
+        style="justify-content:left; flex-wrap: flex-reverse"
+    >
+        <p style="margin-top: 0;">
+            Hi! I'm <a class="highlight">Laker Turner</a>
+            (<a href="/pronouns" class="u-pronouns">she/her</a>). <br /><br />
+
+            <span class="p-note">
+                I'm an 18 year old (soon to be) music student from the UK, <br
+                />
+                writer, amateur programmer and leather jacket enthusiast.
+            </span>
+        </p>
+
+        <img
+            style="margin-left: 2em;"
+            class="u-photo profile-picture"
+            height="120"
+            width="120"
+            src="https://laker.tech/cdn/image/hat.jpg"
+            alt="uwu"
+        />
+    </span>
+
+    <p>
+        I've been creative my entire life, but started writing to clear my head,
+        about 3 years ago.
+    </p>
+
+    <p>
+        I listen to music every second I'm awake. You can look at what I'm
+        listening to over on <a href="https://last.fm/user/lxjv">Last.fm</a>.
+    </p>
+
+    <p>
+        I'm learning a mix of <b>Rust</b> and <b>Typescript</b> right now, but I'm
+        probably going to stick with Rust. <br />
+        On the web side, I like <b>Eleventy</b> (it's what builds this site!).
+    </p>
+
+    <p>
+        When I'm not knee-deep in my terminal, I like making music, taking
+        photographs <br />
+        and reading <strong>Hitch-Hiker's Guide to the Galaxy</strong> for the 5th
+        time.
+    </p>
+
+    <p>Feel free to walk around and see what's going on.</p>
+
+    <p>
+        If you want to keep in touch with me outside of this site, <br />
+        I'm on the fediverse as <a href="https://social.lol/@la"
+            >@la@social.lol</a
+        >
+        or email me at <a href="mailto:hello@laker.tech">hello@laker.tech</a>!
+    </p>
+</BaseLayout>

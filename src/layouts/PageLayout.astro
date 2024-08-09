@@ -1,0 +1,16 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { pageTitle, description } = Astro.props;
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <h2>{pageTitle}</h2>
+    {
+        () => {
+            if (description != null) {
+                return `<blockquote>${description}</description`;
+            }
+        }
+    }
+    <slot />
+</BaseLayout>

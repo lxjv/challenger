@@ -1,0 +1,58 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+
+const dateOptions: object = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+};
+
+const formattedPubDate = new Date(frontmatter.pubDate).toLocaleDateString(
+    "en-US",
+    dateOptions,
+);
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+    <h2>{frontmatter.title}</h2>
+
+    <p>
+        Written {formattedPubDate} by {frontmatter.author}
+    </p>
+
+    <blockquote><em>{frontmatter.description}</em></blockquote>
+
+    <div class="tags">
+        {
+            frontmatter.tags.map((tag: string) => (
+                <p class="tag highlight">
+                    <a href={`/blog/t/${tag}`}>#{tag}</a>
+                </p>
+            ))
+        }
+    </div>
+
+    <img
+        src={frontmatter.image.url || ""}
+        width="600"
+        alt={frontmatter.image.alt || ""}
+    />
+
+    <slot />
+</BaseLayout>
+
+<style>
+    .tags {
+        margin: 1em 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tag {
+        border-radius: 50% 25%;
+        padding: 5px 12px;
+    }
+    .tag > a {
+        color: var(--text-colour-rev);
+    }
+</style>

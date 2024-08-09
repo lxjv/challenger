@@ -1,0 +1,191 @@
+@import url(https://cdn.laker.tech/blog/style/reset.css);
+@import url(https://cdn.laker.tech/blog/style/ctp.css);
+@import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400,700i|ibm-plex-sans:300,300i,400,400i,500,500i,700,700i);
+
+:root {
+    color-scheme: light dark;
+
+    --accent: light-dark(var(--ctp-latte-red), var(--ctp-mocha-lavender));
+
+    --lm-background: var(--ctp-latte-base);
+    --dm-background: var(--ctp-mocha-crust);
+
+    --lm-textcol: var(--ctp-latte-text);
+    --dm-textcol: var(--ctp-mocha-text);
+    --lm-linkcol: var(--ctp-latte-subtext1);
+    --dm-linkcol: var(--ctp-mocha-subtext1);
+
+    --background: light-dark(var(--lm-background), var(--dm-background));
+    --text-colour: light-dark(var(--lm-textcol), var(--dm-textcol));
+    --text-colour-rev: light-dark(var(--ctp-latte-base), var(--ctp-mocha-crust));
+    --link-colour: light-dark(var(--lm-linkcol), var(--dm-linkcol));
+
+    --font-title: "OpenDyslexic", "Atkinson Hyperlegible", "IBM Plex Sans",
+        system-ui, sans-serif;
+    --font-prose: "OpenDyslexic", "Atkinson Hyperlegible", "IBM Plex Sans",
+        system-ui, sans-serif;
+    --font-code: "IBM Plex Mono";
+
+    --padding-def: 1.24em;
+}
+
+html {
+    background: var(--background);
+    color: var(--text-colour);
+    font-family: var(--font-prose);
+    font-weight: 400;
+    line-height: 105%;
+    font-size: 110%;
+}
+
+a {
+    text-decoration: underline dotted var(--accent);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: var(--accent);
+}
+
+a[href*='//']::after
+{
+    content: "  ↗";
+}
+
+.footnote-ref > a {
+    text-decoration: none;
+}
+
+body {
+    padding: calc(var(--padding-def) / 2) calc(var(--padding-def) * 2);
+}
+
+#content {
+    padding: 0.62em;
+    padding-left: 0;
+    width: fit-content;
+    max-width: 75%;
+}
+
+@media (max-width: 35rem) {
+    html {
+        font-size: 100%;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    #hd-quote {
+        display: none;
+    }
+
+    header > h1 {
+        padding: 0 15px;
+    }
+}
+
+.header-name {
+    color: var(--text-colour);
+}
+
+.header-icon {
+    color: var(--accent);
+}
+
+#header-nav > a:not(:last-child) {
+    margin-right: 0.24em;
+}
+
+footer {
+    margin-bottom: var(--padding-def);
+    /* so things arent just cut off after the quote */
+}
+
+blockquote {
+    margin-left: 13px;
+    padding-left: 8px;
+    border-left: 5px double var(--accent);
+    border-spacing: 5px;
+}
+
+.highlight {
+    background-color: var(--accent);
+    border-radius: 3.14px;
+    padding: 3.14px 4px;
+    font-weight: 500;
+    color: var(--text-colour-rev) !important;
+}
+
+.profile-picture {
+    border-radius: 3em 1em;
+    border: solid var(--accent) 3px;
+}
+
+small {
+    font-size: 69%;
+    font-weight: 420;
+}
+
+hr {
+    border: none;
+    border-top: 3px double var(--accent);
+    margin: 1em 0;
+    text-align: center;
+    height: 5px;
+}
+
+ul.a {
+    list-style: square url("/cdn/image/Five_Pointed_Star_Solid.svg");
+}
+
+img {
+    border: 1px solid var(--accent);
+    max-width: 720px;
+}
+
+.box {
+    max-width: fit-content;
+    padding: 2em 1.24em;
+    border: var(--accent) 3px solid;
+    border-radius: 1em 3em;
+}
+
+.fa-rss {
+    color: light-dark(var(--ctp-latte-peach), var(--ctp-mocha-peach));
+}
+
+/* blog stuff */
+#post-header-image {
+    max-width: 720px;
+}
+
+/* -- utility classes -- */
+/* Center thingies */
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* No Text Decoration */
+.ntd {
+    text-decoration: none !important;
+}
+
+/* No Display */
+.nd {
+    display: none;
+}
+
+/* No Borders (or tories thx) */
+.nb {
+    border: none !important;
+}
+
+/* No Margin */
+.nm {
+    margin: 0 !important;
+}

@@ -1,0 +1,30 @@
+---
+import Button from "../../components/Button.astro";
+import PostListFrag from "../../components/PostListFrag.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("blog");
+
+const pageTitle = "Blooooooooooooooooog";
+---
+
+<PageLayout pageTitle={pageTitle}>
+    <p>It's a blog.</p>
+
+    <Button go="/blog/t" label="Show tag list" />
+
+    <div id="postlist">
+        {
+            allPosts.map((post) => (
+                <PostListFrag
+                    url={`/blog/${post.slug}/`}
+                    title={post.data.title}
+                    pubDate={post.data.pubDate}
+                />
+            ))
+        }
+    </div>
+</PageLayout>
+
+<style></style>
