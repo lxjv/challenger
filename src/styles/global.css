@@ -1,5 +1,7 @@
 @import url(https://cdn.laker.tech/blog/style/reset.css);
 @import url(https://cdn.laker.tech/blog/style/ctp.css);
+@import url(https://cdn.laker.tech/blog/style/util.css);
+
 @import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400,700i|ibm-plex-sans:300,300i,400,400i,500,500i,700,700i);
 
 :root {
@@ -166,37 +168,4 @@ img {
 
 .fa-rss {
     color: light-dark(var(--ctp-latte-peach), var(--ctp-mocha-peach));
-}
-
-/* blog stuff */
-#post-header-image {
-    max-width: 720px;
-}
-
-/* -- utility classes -- */
-/* Center thingies */
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* No Text Decoration */
-.ntd {
-    text-decoration: none !important;
-}
-
-/* No Display */
-.nd {
-    display: none;
-}
-
-/* No Borders (or tories thx) */
-.nb {
-    border: none !important;
-}
-
-/* No Margin */
-.nm {
-    margin: 0 !important;
 }
