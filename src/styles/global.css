@@ -62,6 +62,7 @@ a:active {
 a[href*='//']::after
 {
     content: "  ↗";
+    text-decoration: none !important;
 }
 
 .footnote-ref > a {

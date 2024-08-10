@@ -6,7 +6,8 @@
             "@cmp/*": ["src/components/*"],
             "@ass/*": ["src/assets/*"],
             "@lay/*": ["src/layouts/*"],
-            "@data/*": ["src/data/*"]
+            "@data/*": ["src/data/*"],
+            "@lib/*": ["src/lib/*"]
         },
         "jsx": "react-jsx",
         "jsxImportSource": "preact",
