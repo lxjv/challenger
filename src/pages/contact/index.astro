@@ -1,6 +1,6 @@
 ---
-import GoLink from "@cmp/links/GoLink.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
+import GoLink from "@cmp/links/GoLink.astro";
 
 const pageTitle = "Contact";
 ---
@@ -12,7 +12,11 @@ const pageTitle = "Contact";
             My personal email is <a href="mailto:la@laker.gay">la@laker.gay</a>
             (<a href="/.well-known/pgp">🔑 PGP key available here</a>)
         </li>
-        <li>My email for anything resembling professional work: <a href="mailto:hello@laker.tech">hello@laker.tech</a></li>
+        <li>
+            My email for anything resembling professional work: <a
+                href="mailto:hello@laker.tech">hello@laker.tech</a
+            >
+        </li>
         <GoLink go="/contact/keys" displayText="Encryption keys" />
     </ul>
 </PageLayout>
