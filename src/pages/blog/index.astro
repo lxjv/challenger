@@ -1,14 +1,14 @@
 ---
-import PostListMini from "@cmp/blog/PostListMini.astro";
-import Button from "@cmp/links/Button.astro";
 import PageLayout from "@lay/PageLayout.astro";
+import PostListMini from "@cmp/blog/PostListMini.astro";
+import GoLink from "@cmp/links/GoLink.astro";
 
 const pageTitle = "Blog";
 const description = "I write about things sometimes. This is where I put most of it.";
 ---
 
 <PageLayout pageTitle={pageTitle} description={description}>
-    <Button go="/blog/t" label="Show tag list" />
+    <GoLink go="/blog/t" label="Show tag list" />
 
     <hr />
 
