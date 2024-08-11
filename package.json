@@ -23,7 +23,6 @@
         "typescript": "^5.5.4"
     },
     "devDependencies": {
-        "@flydotio/dockerfile": "^0.5.8",
-        "@iconify-json/fa6-solid": "^1.1.24"
+        "@flydotio/dockerfile": "^0.5.8"
     }
 }
