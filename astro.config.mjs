@@ -5,7 +5,7 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: "https://new.laker.tech",
-  integrations: [icon()],
+  integrations: [],
   image: {
     domains: ["cdn.laker.tech"]
   }
