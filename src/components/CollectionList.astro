@@ -1,0 +1,23 @@
+---
+import FormattedDate from "@cmp/FormattedDate.astro";
+import { getCollection } from "astro:content";
+import { getPublishedAndSortedPosts } from "@lib/utils/drafts";
+const { collection } = Astro.props;
+const items = getPublishedAndSortedPosts(await getCollection(collection));
+---
+
+<ul>
+    {
+        items.map((item) => (
+            <li>
+                <FormattedDate date={item.data.pubDate} /> —
+                <>
+                    <a href={`/${collection}/${item.slug}`}>{item.data.title}</a>
+                </>
+                <blockquote style="margin: 10px 0 1em 15px;">
+                    {item.data.description}
+                </blockquote>
+            </li>
+        ))
+    }
+</ul>

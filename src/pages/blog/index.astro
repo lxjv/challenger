@@ -1,16 +1,18 @@
 ---
 import PageLayout from "@lay/PageLayout.astro";
-import PostListMini from "@cmp/blog/PostListMini.astro";
+import PostListMini from "@cmp/CollectionList.astro";
 import Button from "@cmp/links/Button.astro";
+import PinnedPosts from "@cmp/PinnedPosts.astro";
 
 const pageTitle = "Blog";
-const description = "I write about things sometimes. This is where I put most of it.";
+const description =
+    "I write about things sometimes. This is where I put most of it.";
 ---
 
 <PageLayout pageTitle={pageTitle} description={description}>
     <Button go="/blog/t" label="Show tag list" />
 
-    <hr />
+    <PinnedPosts collection="blog">
 
-    <PostListMini />
+    <PostListMini collection="blog" />
 </PageLayout>

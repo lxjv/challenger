@@ -1,0 +1,13 @@
+---
+import PageLayout from "@lay/PageLayout.astro";
+import PostListMini from "@cmp/CollectionList.astro";
+import Button from "@cmp/links/Button.astro";
+
+const pageTitle = "Projects";
+const description =
+    "Stuff I've made. Mostly programming related.";
+---
+
+<PageLayout pageTitle={pageTitle} description={description}>
+    <PostListMini collection="projects"/>
+</PageLayout>
