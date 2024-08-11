@@ -1,10 +1,10 @@
 ---
-import text from "../data/flavourtext.json";
+import text from "@data/flavourtext.json";
 import { getRandomItem } from "@lib/filters/getRandom";
 const quotes = text.quotes;
 ---
 
-<blockquote id="header-text-bq">
+<blockquote>
     {
         getRandomItem(quotes)
     }
