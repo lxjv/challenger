@@ -5,12 +5,6 @@ const { pageTitle, description } = Astro.props;
 
 <BaseLayout pageTitle={pageTitle}>
     <h2>{pageTitle}</h2>
-    {
-        () => {
-            if (description != null) {
-                return `<blockquote>${description}</description`;
-            }
-        }
-    }
+    <blockquote>{description}</blockquote>
     <slot />
 </BaseLayout>

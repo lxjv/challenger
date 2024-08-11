@@ -3,12 +3,10 @@ import PostListMini from "@cmp/blog/PostListMini.astro";
 import Button from "@cmp/links/Button.astro";
 import PageLayout from "@lay/PageLayout.astro";
 const pageTitle = "Blog";
-import "../../styles/global.css"
+const description = "I write about things sometimes. This is where I put most of it.";
 ---
 
-<PageLayout pageTitle={pageTitle}>
-    <p>I write about things sometimes. This is where I put most of it.</p>
-
+<PageLayout pageTitle={pageTitle} description={description}>
     <Button go="/blog/t" label="Show tag list" />
 
     <hr style="max-width: 33%;" />

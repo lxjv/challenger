@@ -41,10 +41,11 @@ html {
 }
 
 body {
+    width: fit-content;
     max-width: 65%;
 }
 
-@media (min-width: 35rem) {
+@media (max-width: 35rem) {
     body {
         max-width: 100%;
     }
