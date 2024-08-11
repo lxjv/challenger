@@ -1,5 +1,11 @@
 ---
 const { go, displayText } = Astro.props;
 ---
-
 <span>→ <a href={go}> {displayText}</a></span>
+
+<style>
+    span {
+        margin: 30px;
+        padding-top: 30px;
+    }
+</style>
