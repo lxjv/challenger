@@ -24,13 +24,6 @@ export const getPublishedAndSortedPosts = (
 };
 export const getPublishedAndSortedNotes = (allPosts: CollectionEntry<"notes">[]) => {
     return allPosts
-        .filter((post) => {
-            if (import.meta.env.PROD) {
-                return !post.data.draft;
-            }
-
-            return siteConfig.devMode.showDraftPages ? true : !post.data.draft;
-        })
         .sort((post1, post2) => {
             if (isDateBefore(post1.data.pubDate, post2.data.pubDate)) {
                 return 1;
