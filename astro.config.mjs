@@ -7,9 +7,6 @@ export default defineConfig({
     domains: ["cdn.laker.tech"]
   },
   redirects: {
-    '/prj/[...slug]': '/projects/[...slug]',
-    '/n/[...slug]': '/notes/[...slug]',
-    '/b/[...slug]': '/blog/[...slug]',
     '/feed.xml': '/blog/feed.rss'
   }
 });
