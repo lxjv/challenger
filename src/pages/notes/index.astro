@@ -1,0 +1,28 @@
+---
+import PageLayout from "@lay/PageLayout.astro";
+import { getPublishedAndSortedPosts } from "@lib/utils/drafts";
+import FormattedDate from "@cmp/FormattedDate.astro";
+import { getCollection } from "astro:content";
+
+const pageTitle = "laNotes";
+const description = "Small things, mostly status updates";
+const items = getPublishedAndSortedPosts(await getCollection("notes"));
+---
+
+<PageLayout pageTitle={pageTitle} description={description}>
+    <ul>
+        {
+            items.map((item) => (
+                <li style="list-style-type: none;">
+                    <blockquote style="margin: 10px 0 1em 15px;">
+                        {item.body}
+                        <br /> —
+                        <a href={`/notes/${item.slug}`}>
+                            <FormattedDate date={item.data.pubDate} />
+                        </a>
+                    </blockquote>
+                </li>
+            ))
+        }
+    </ul>
+</PageLayout>

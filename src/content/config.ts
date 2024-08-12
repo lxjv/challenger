@@ -27,7 +27,7 @@ const notesCollection = defineCollection({
         pubDate: z.date(),
         title: z.string().optional(),
         pinned: z.boolean().default(false),
-        tags: z.array(z.string()),
+        tags: z.array(z.string()).optional(),
     }),
 });
 

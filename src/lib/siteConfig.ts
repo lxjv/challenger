@@ -7,14 +7,18 @@ export const siteConfig = {
             fediverse: "@la@social.lol",
             image: {
                 src: "",
-                alt: ""
-            }
-        }
+                alt: "",
+            },
+        },
     },
     author: {
         name: "Laker Turner",
         link: "https://laker.tech",
-        email: "la@laker.gay"
+        email: "la@laker.gay",
+        photo: {
+            url: "https://cdn.laker.tech/images/tree.png",
+            alt: "welcome to the club"
+        },
     },
     devMode: {
         showDraftPages: true,

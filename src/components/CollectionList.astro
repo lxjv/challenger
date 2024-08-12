@@ -10,11 +10,9 @@ const items = getPublishedAndSortedPosts(await getCollection(collection));
     {
         items.map((item) => (
             <li>
+                <FormattedDate date={item.data.pubDate} /> —
                 <>
-                    <a href={`/${collection}/${item.slug}`}>
-                        {item.data.title}
-                    </a>
-                     — <FormattedDate date={item.data.pubDate} />
+                    <a href={`/blog/${item.slug}`}>{item.data.title}</a>
                 </>
                 <blockquote style="margin: 10px 0 1em 15px;">
                     {item.data.description}

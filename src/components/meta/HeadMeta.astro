@@ -12,10 +12,12 @@ import { siteConfig as sc } from "@lib/siteConfig";
     <meta name="description" content={description || sc.meta.description} />
 
     <!-- favicons -->
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="https://fav.farm/%F0%9F%92%9C" sizes="32x32" />
+    <link
+        rel="icon"
+        href="https://fav.farm/%F0%9F%92%9C"
+        type="image/svg+xml"
+    />
 
     <!-- opengraph -->
     <meta property="og:site_name" content={siteTitle} />
@@ -30,7 +32,7 @@ import { siteConfig as sc } from "@lib/siteConfig";
         content=`https://${sc.meta.domain}${Astro.url.pathname}`
     />
 
-    <meta property="og:image" content="{{author.photo}}" />
+    <meta property="og:image" content={sc.author.photo.url} />
     <meta property="fediverse:creator" content={sc.meta.opengraph.fediverse} />
     <meta property="og:image:secure_url" content="{{author.photo}}" />
     <meta property="og:image:width" content="1280" />
