@@ -3,8 +3,8 @@
     "trailingSlash": false,
     "cleanUrls": true,
     "redirects": [
-        { "source": "/b/:path*", "destination": "/blog/:path*" }
-        { "source": "/n/:path*", "destination": "/notes/:path*" }
+        { "source": "/b/:path*", "destination": "/blog/:path*" },
+        { "source": "/n/:path*", "destination": "/notes/:path*" },
         { "source": "/p/:path*", "destination": "/projects/:path*" }
     ]
 }
