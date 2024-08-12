@@ -1,12 +1,12 @@
 ---
 import PageLayout from "@lay/PageLayout.astro";
-import { getPublishedAndSortedPosts } from "@lib/utils/drafts";
+import { getPublishedAndSortedNotes } from "@lib/utils/drafts";
 import FormattedDate from "@cmp/FormattedDate.astro";
 import { getCollection } from "astro:content";
 
 const pageTitle = "laNotes";
 const description = "Small things, mostly status updates";
-const items = getPublishedAndSortedPosts(await getCollection("notes"));
+const items = getPublishedAndSortedNotes(await getCollection("notes"));
 ---
 
 <PageLayout pageTitle={pageTitle} description={description}>
