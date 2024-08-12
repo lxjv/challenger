@@ -1,22 +1,16 @@
 ---
 import "../styles/global.css";
+import HeadMeta from "@cmp/meta/HeadMeta.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 
-const siteTitle = "Laker Turner";
 const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle + " ~ " || ""}{siteTitle}</title>
-    </head>
+    <HeadMeta pageTitle={pageTitle} />
     <body>
-        <Header siteTitle={siteTitle} />
+        <Header />
         <slot />
         <Footer />
     </body>

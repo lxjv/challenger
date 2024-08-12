@@ -2,21 +2,23 @@
 import { getCollection } from "astro:content";
 import FormattedDate from "./FormattedDate.astro";
 
-const posts = await getCollection("blog");
-const pinnedPosts = posts.filter((post) => post.data.pinned);
+const { collection } = Astro.props;
+
+const items = await getCollection(collection);
+const pinned = items.filter((item: any) => item.data.pinned);
 ---
 
-{
-    pinnedPosts.map((item) => (
-        <li>
-            <FormattedDate date={item.data.pubDate} /> —
-            <>
-                📌
-                <a href={`/blog/${item.slug}`}>{item.data.title}</a>
-            </>
-            <blockquote style="margin: 10px 0 1em 15px;">
-                {item.data.description}
-            </blockquote>
-        </li>
-    ))
-}
+<ul class="fa-ul">
+    {
+        pinned.map((item: any) => (
+            <li>
+                <>
+                    <span class="fa-li">
+                        <i class="fa-solid fa-thumbtack" />
+                    </span>
+                    <a href={`/blog/${item.slug}`}>{item.data.title}</a> — <FormattedDate date={item.data.pubDate} />
+                </>
+            </li>
+        ))
+    }
+</ul>

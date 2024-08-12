@@ -2,9 +2,13 @@ export const siteConfig = {
     meta: {
         title: "Laker Turner",
         description: "Laker Turner's site",
-        image: {
-            src: "",
-            alt: ""
+        domain: "laker.tech",
+        opengraph: {
+            fediverse: "@la@social.lol",
+            image: {
+                src: "",
+                alt: ""
+            }
         }
     },
     author: {

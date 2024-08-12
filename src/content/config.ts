@@ -8,13 +8,15 @@ const postsCollection = defineCollection({
         title: z.string(),
         pubDate: z.date(),
         description: z.string().default("no description"),
-        relatedPosts: z.array(reference('blog')).optional(),
+        relatedPosts: z.array(reference("blog")).optional(),
         pinned: z.boolean().default(false),
         author: z.string().default("Laker Turner"),
-        image: z.object({
-            url: z.string(),
-            alt: z.string(),
-        }).optional(),
+        image: z
+            .object({
+                url: z.string(),
+                alt: z.string(),
+            })
+            .optional(),
         tags: z.array(z.string()),
     }),
 });
@@ -23,6 +25,7 @@ const notesCollection = defineCollection({
     type: "content",
     schema: z.object({
         pubDate: z.date(),
+        title: z.string().optional(),
         pinned: z.boolean().default(false),
         tags: z.array(z.string()),
     }),
@@ -33,10 +36,13 @@ const projectsCollection = defineCollection({
     schema: z.object({
         status: z.number().int().min(0).max(2),
         title: z.string(),
-        pubDate: z.date().default("1970-01-01"),
+        pubDate: z.date().optional(),
         description: z.string().default("no description"),
-        image: z
-            .object({
+        url: z.object({
+            source: z.string().url(),
+            external: z.string().url(),
+        }).optional(),
+        image: z.object({
                 url: z.string(),
                 alt: z.string(),
             })
@@ -49,5 +55,5 @@ const projectsCollection = defineCollection({
 export const collections = {
     blog: postsCollection,
     notes: notesCollection,
-    projects: projectsCollection
+    projects: projectsCollection,
 };

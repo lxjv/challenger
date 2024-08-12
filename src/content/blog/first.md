@@ -1,4 +1,5 @@
 ---
+pinned: true
 title: "hello"
 description: "test"
 pubDate: 2024-08-09

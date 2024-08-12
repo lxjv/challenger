@@ -11,8 +11,8 @@ const description =
 
 <PageLayout pageTitle={pageTitle} description={description}>
     <Button go="/blog/t" label="Show tag list" />
-
-    <PinnedPosts collection="blog">
-
+    <h3>Pinned posts</h3>
+    <PinnedPosts collection="blog" />
+    <hr>
     <PostListMini collection="blog" />
 </PageLayout>

@@ -15,11 +15,13 @@
         "@astrojs/rss": "^4.0.7",
         "add": "^2.0.6",
         "astro": "^4.12.3",
+        "markdown-it": "^14.1.0",
         "mdast-util-to-string": "^4.0.0",
         "preact": "^10.23.1",
         "prettier": "^3.3.3",
         "prettier-plugin-astro": "^0.14.1",
         "reading-time": "^1.5.0",
+        "sanitize-html": "^2.13.0",
         "typescript": "^5.5.4"
     },
     "devDependencies": {
