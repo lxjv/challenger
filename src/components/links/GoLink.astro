@@ -2,14 +2,7 @@
 const { go, displayText } = Astro.props;
 ---
 
-<p>
-    <i class="fa-solid fa-arrow-right"></i>
+<ul class="fa-ul"><li>
+    <i class="fa-li fa-solid fa-arrow-right" style="fill: var(--accent)"></i>
     <a href={go}> {displayText}</a>
-</p>
-
-<style>
-    p {
-        padding: 5px 0;
-        margin: 0;
-    }
-</style>
+</li></ul>

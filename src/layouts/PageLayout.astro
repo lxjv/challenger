@@ -1,10 +1,28 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-const { pageTitle, description } = Astro.props;
+import BackButton from "@cmp/links/BackButton.astro";
+const { pageTitle, description, back } = Astro.props;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <h2>{pageTitle}</h2>
+
+    {
+        () => {
+            if (back) {
+                return (
+                    <a href={back}>
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            style="margin-right: 10px;"
+                        />back to {back}
+                    </a>
+                );
+            }
+            return null;
+        }
+    }
+
     <blockquote>{description}</blockquote>
     <slot />
 </BaseLayout>

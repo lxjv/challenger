@@ -1,0 +1,23 @@
+---
+interface Props {
+    back: string;
+}
+const back = Astro.props;
+---
+
+{
+    () => {
+        if (back) {
+            return (
+                <a href={back}>
+                    <i
+                        class="fa-solid fa-arrow-right"
+                        style="margin-right: 5px;"
+                    />
+                back
+                </a>
+            );
+        }
+        return null;
+    }
+}

@@ -1,7 +1,44 @@
 ---
-import Layout from "@lay/PageLayout.astro"
+import Layout from "@lay/PageLayout.astro";
 ---
 
-<Layout pageTitle="Every account*" description="* That I want public, at least.">
-    
+<Layout
+    pageTitle="Every account*"
+    description="* That I want public, at least."
+    back="/contact"
+>
+    <h3>Active</h3>
+    <ul class="fa-ul"></ul>
+
+    <h3>Twilight Zone</h3>
+    <p>
+        These are accounts that exist but I don't use, or I'm just holding my
+        username (but they are mine)
+    </p>
+    <ul class="fa-ul">
+        <li>
+            <i class="fa-brands fa-tumblr fa-li"></i>
+            Tumblr: <a href="https://lakerjv.tumblr.com">@lakerjv</a> — I was going
+            to use this as a photography blog but never got around to it
+        </li>
+    </ul>
+
+    <h3>Nope</h3>
+    <ul class="fa-ul nope">
+        <li>
+            <i class="fa-brands fa-twitter fa-li"></i>
+            Twitter — Elon Musk is an insolent child,
+            which is fitting given his latest "creation" looks like it was designed by a 5 year old.
+        </li>
+        <li>
+            <i class="fa-brands fa-tiktok fa-li"></i>
+            TikTok — Absolutely destroyed my attention span, I deleted the app 2 years ago and havent looked back.
+        </li>
+    </ul>
 </Layout>
+
+<style>
+    .nope > li > .fa-li {
+        color: light-dark(var(--ctp-latte-red), var(--ctp-mocha-red));
+    }
+</style>
