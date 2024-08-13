@@ -6,10 +6,12 @@ import FlavourText from "../FlavourText.astro";
 <footer style="margin-top: 2em;">
     <div id="1">
         <p>
-            Made with <i class="fa-solid fa-heart"></i> by Laker Turner (hi!) in
-            rainy [town], England.
+            Made with <i
+                class="fa-solid fa-heart"
+                style="color: light-dark(var(--ctp-latte-red), var(--ctp-mocha-red))"
+            ></i> in [very] rainy England.
         </p>
-        <div>
+        <div id="2">
             <Social
                 platform="github.com"
                 username="lxjv"
@@ -25,3 +27,9 @@ import FlavourText from "../FlavourText.astro";
     </div>
     <FlavourText />
 </footer>
+
+<style>
+    #2 > a:not(:last-child) {
+        margin-right: 1em;
+    }
+</style>

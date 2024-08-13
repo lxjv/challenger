@@ -1,8 +1,8 @@
 ---
 import PageLayout from "@lay/PageLayout.astro";
-import PostListMini from "@cmp/CollectionList.astro";
-import Button from "@cmp/links/Button.astro";
+import CollectionList from "@cmp/CollectionList.astro";
 import PinnedPosts from "@cmp/PinnedPosts.astro";
+import GoLink from "@cmp/links/GoLink.astro";
 
 const pageTitle = "Blog";
 const description =
@@ -10,9 +10,13 @@ const description =
 ---
 
 <PageLayout pageTitle={pageTitle} description={description}>
-    <Button go="/blog/t" label="Show tag list" />
+    <GoLink go="/blog/t" displayText="Show tag list" />
+    <span>
+        <i class="fa-solid fa-rss"></i>
+        <a href="/blog/feed.rss">Subscribe with RSS</a>
+    </span>
     <h3>Pinned posts</h3>
     <PinnedPosts collection="blog" />
-    <hr>
-    <PostListMini collection="blog" />
+    <hr />
+    <CollectionList collection="blog" />
 </PageLayout>

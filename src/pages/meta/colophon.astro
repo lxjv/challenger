@@ -1,12 +1,18 @@
 ---
 import Layout from "@lay/PageLayout.astro";
+import pkgjson from "package.json";
 ---
 
 <Layout
     pageTitle="Colophon"
     description="How this is beamed into your home/office/hamster wheel"
 >
-    <p>laker.tech is made with Astro, and hosted using Vercel.</p>
+    <p>
+        laker.tech is made with <a href="//astro.build">Astro</a>
+        {pkgjson.dependencies.astro}, and hosted using <a href="//vercel.com"
+            >Vercel</a
+        >.
+    </p>
     <p>
         Everything was written by hand, using either Neovim or VSCode. I don't
         use AI.
