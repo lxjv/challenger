@@ -1,4 +1,5 @@
 ---
 pubDate: 2024-08-12
 ---
-awawa
+
+First note of the new website. this will probably not work with echofeed.
