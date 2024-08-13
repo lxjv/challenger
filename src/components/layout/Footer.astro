@@ -3,24 +3,25 @@ import Social from "../Social.astro";
 import FlavourText from "../FlavourText.astro";
 ---
 
-<footer>
-    <div id="footer-1">
-        © Laker Turner 2024
-        <Social platform="github.com" username="lxjv" displayText="GitHub" />
-        <Social platform="laker.lol" username="" displayText="laker.lol" />
-        <Social
-            platform="github.com"
-            username="lxjv/challenger"
-            displayText="View source code"
-        />
+<footer style="margin-top: 2em;">
+    <div id="1">
+        <p>
+            Made with <i class="fa-solid fa-heart"></i> by Laker Turner (hi!) in
+            rainy [town], England.
+        </p>
+        <div>
+            <Social
+                platform="github.com"
+                username="lxjv"
+                displayText="GitHub"
+            />
+            <Social platform="laker.lol" username="" displayText="laker.lol" />
+            <Social
+                platform="github.com"
+                username="lxjv/challenger"
+                displayText="View source code"
+            />
+        </div>
     </div>
     <FlavourText />
 </footer>
-
-<style>
-    #footer-1 {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-</style>
