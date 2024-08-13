@@ -5,6 +5,8 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
+    <i class="fa-solid fa-arrow-left" style="margin-right: 2px;"></i>
+    <a href="/projects">back to projects </a>
     <div id="header-info">
         <h2>{frontmatter.title}</h2>
         <span class="date"><FormattedDate date={frontmatter.pubDate} /></span>
@@ -13,13 +15,7 @@ const { frontmatter } = Astro.props;
     <blockquote><em>{frontmatter.description}</em></blockquote>
 
     <div class="tech">
-        {
-            frontmatter.tech.map((tag: string) => (
-                <span>
-                    #{tag}
-                </span>
-            ))
-        }
+        {frontmatter.tech.map((tag: string) => <span>#{tag}</span>)}
     </div>
 
     <slot />
@@ -27,24 +23,20 @@ const { frontmatter } = Astro.props;
 
 <style>
     #header-info {
+        margin: 0.5em 0 0 0;
         display: flex;
         vertical-align: middle;
-        gap: 1em;
     }
-    #header-info>span.date {
+    #header-info > span.date {
         margin-top: 5px;
+        margin-left: 10px;
     }
-    #header-info>h2 {
+    #header-info > h2 {
         margin-top: 0;
     }
-    .tags {
-        margin: 0.3em 0;
-        display: flex;
-        flex-wrap: wrap;
-    }
+
     .tech {
         border-radius: 30% 11%;
         padding: 5px 12px;
-        
     }
 </style>

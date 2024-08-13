@@ -9,12 +9,13 @@ const { pageTitle, description, back } = Astro.props;
     {
         () => {
             if (back) {
-                return (
+                    return (
+                    <i
+                        class="fa-solid fa-arrow-left"
+                        style="margin-right: 2px;"
+                    />
                     <a href={back}>
-                        <i
-                            class="fa-solid fa-arrow-right"
-                            style="margin-right: 10px;"
-                        />back to {back}
+                       back to {back}
                     </a>
                 );
             }

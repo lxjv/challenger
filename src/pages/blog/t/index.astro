@@ -6,11 +6,16 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 const pageTitle = "Tag Index";
 ---
 
-<PageLayout pageTitle={pageTitle}>
-    <ul>
+<PageLayout
+    pageTitle={pageTitle}
+    description="All the tags I've used on my blog"
+    back="/blog"
+>
+    <ul class="fa-ul">
         {
             tags.map((tag) => (
                 <li>
+                    <i class="fa-li fa-solid fa-hashtag" />
                     <a href={`/blog/t/${tag}`}>{tag}</a>
                 </li>
             ))
