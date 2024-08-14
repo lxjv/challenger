@@ -14,6 +14,9 @@ importers:
       '@astrojs/rss':
         specifier: ^4.0.7
         version: 4.0.7
+      '@lastfm-ts/wrapper':
+        specifier: ^0.0.4
+        version: 0.0.4
       add:
         specifier: ^2.0.6
         version: 2.0.6
@@ -487,6 +490,12 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@lastfm-ts/api-types@0.0.4':
+    resolution: {integrity: sha512-Cj8nlA1CfJvLXHOlKtEoBU2j5TP/fe3QSSjEBr2ovyv3SyUg3TX1TYUBKAbsuicINZ/Oc7F+3lPGE20kgJ0TTQ==}
+
+  '@lastfm-ts/wrapper@0.0.4':
+    resolution: {integrity: sha512-EalnBWGY1ZYalAbO8rYP/yGWGYIch+M+d3kc1eRo2YxQq2kr7g3/HkQHId7Xj0QoTnIZACpqsvjZSH2OVD02Qw==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2601,6 +2610,12 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@lastfm-ts/api-types@0.0.4': {}
+
+  '@lastfm-ts/wrapper@0.0.4':
+    dependencies:
+      '@lastfm-ts/api-types': 0.0.4
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
