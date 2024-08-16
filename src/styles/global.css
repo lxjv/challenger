@@ -19,7 +19,10 @@
 
     --background: light-dark(var(--lm-background), var(--dm-background));
     --text-colour: light-dark(var(--lm-textcol), var(--dm-textcol));
-    --text-colour-rev: light-dark(var(--ctp-latte-base), var(--ctp-mocha-crust));
+    --text-colour-rev: light-dark(
+        var(--ctp-latte-base),
+        var(--ctp-mocha-crust)
+    );
     --link-colour: light-dark(var(--lm-linkcol), var(--dm-linkcol));
 
     --font-title: "OpenDyslexic", "Atkinson Hyperlegible", "IBM Plex Sans",
@@ -42,7 +45,7 @@ html {
 
 body {
     width: fit-content;
-    max-width: 65%;
+    max-width: 80%;
 }
 
 @media (max-width: 35rem) {

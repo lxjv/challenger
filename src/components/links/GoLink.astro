@@ -1,8 +1,12 @@
 ---
-const { go, displayText } = Astro.props;
+const { go, displayText, icon } = Astro.props;
 ---
 
-<ul class="fa-ul"><li>
-    <i class="fa-li fa-solid fa-arrow-right" style="fill: var(--accent)"></i>
-    <a href={go}> {displayText}</a>
-</li></ul>
+<ul class="fa-ul">
+    <li>
+        <i
+            class={"fa-li" + icon || "fa-li fa-solid fa-arrow-right"}
+            style="fill: var(--accent)"></i>
+        <a href={go}> {displayText}</a>
+    </li>
+</ul>

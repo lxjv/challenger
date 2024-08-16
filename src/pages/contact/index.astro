@@ -5,7 +5,11 @@ import GoLink from "@cmp/links/GoLink.astro";
 const pageTitle = "Contact";
 ---
 
-<PageLayout pageTitle={pageTitle}>
+<PageLayout
+    pageTitle={pageTitle}
+    description="places"
+    icon="fa-solid fa-address-card"
+>
     <h3>Email</h3>
     Email's 1. anything but dead and 2. the best way to get in touch with me
     <ul>
@@ -22,9 +26,9 @@ const pageTitle = "Contact";
     I'd rather not, but it's a part of society for at least 15 more minutes
     <ul class="fa-ul">
         <li>
-            <i class="fa-li fa-brands fa-mastodon"></i>Mastodon: <a
-                href="//social.lol/@la">@la@social.lol</a
-            >
+            <i class="fa-li fa-brands fa-mastodon"></i>
+            Mastodon:
+            <a href="//social.lol/@la">@la@social.lol </a>
         </li>
         <li></li>
     </ul>

@@ -1,7 +1,24 @@
 ---
-import Layout from "@lay/PageLayout.astro"
+import Layout from "@lay/PageLayout.astro";
 ---
 
-<Layout pageTitle="" description="">
-    
+<Layout
+    pageTitle="Subscribe"
+    description="hit that like button and ring the bell fellow gamers"
+>
+    <p>
+        I'm working on getting Atom and JSON feeds back <br />
+        but I can't seem to find anything that works with Astro, so call that a Soon™
+    </p>
+    <ul class="fa-ul">
+        <li>
+            <i class="fa-li fa-solid fa-signature"></i>
+            <b>laBlog</b>: <a href="/blog/feed.rss">RSS</a>
+        </li>
+        <li>
+            <i class="fa-li fa-solid fa-pencil"></i>
+            <b>laNotes</b>: <a href="/notes/feed.rss">RSS</a>
+        </li>
+        <li></li>
+    </ul>
 </Layout>
