@@ -1,0 +1,13 @@
+---
+const { override, li } = Astro.props;
+
+// Initialize list with an empty string or default value
+let list: string = "";
+
+// Assign "fa-li" if li is truthy
+if (li) {
+    list = "fa-li";
+}
+---
+
+<i class={`${list} ${override || "fa-solid fa-arrow-right"}`}></i>

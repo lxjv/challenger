@@ -1,8 +1,11 @@
 ---
-const { go, displayText } = Astro.props;
+import Icon from "@cmp/Icon.astro";
+const { go, displayText, icon } = Astro.props;
 ---
 
-<ul class="fa-ul"><li>
-    <i class="fa-li fa-solid fa-arrow-right" style="fill: var(--accent)"></i>
-    <a href={go}> {displayText}</a>
-</li></ul>
+<ul class="fa-ul">
+    <li>
+        <Icon override={icon} li={true} />
+        <a href={go}> {displayText}</a>
+    </li>
+</ul>

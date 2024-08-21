@@ -1,7 +1,7 @@
 export const siteConfig = {
     meta: {
         title: "Laker Turner",
-        description: "Laker Turner's site",
+        description: "Laker Turner's personal site",
         domain: "laker.tech",
         opengraph: {
             fediverse: "@la@social.lol",
@@ -17,7 +17,7 @@ export const siteConfig = {
         email: "la@laker.gay",
         photo: {
             url: "https://cdn.laker.tech/images/tree.png",
-            alt: "welcome to the club"
+            alt: "welcome to the club",
         },
     },
     devMode: {

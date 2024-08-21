@@ -6,6 +6,17 @@ import Layout from "@lay/PageLayout.astro";
     pageTitle="Everything else"
     description="All the pages that aren't in the header"
 >
+    <h3>/me</h3>
+    <ul class="fa-ul">
+        <li>
+            <i class="fa-li fa-solid fa-toolbox"></i>
+            <a href="/me/uses">/uses</a>, what I use, if you want to know
+        </li>
+        <li>
+            <i class="fa-li fa-solid fa-clipboard"></i>
+            <a href="/collections">/collections</a>, for all the things I collect!
+        </li>
+    </ul>
     <h3>/meta</h3>
     <ul class="fa-ul">
         <li>
@@ -28,3 +39,12 @@ import Layout from "@lay/PageLayout.astro";
         <li>/now</li>
     </ul>
 </Layout>
+
+<style>
+    .fa-code-branch {
+        color: light-dark(var(--ctp-latte-red), var(--ctp-mocha-red));
+    }
+    .fa-wand-magic-sparkles {
+        color: light-dark(var(--ctp-latte-green), var(--ctp-mocha-green));
+    }
+</style>
