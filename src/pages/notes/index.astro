@@ -9,7 +9,7 @@ const description = "Small things, mostly status updates";
 const items = getPublishedAndSortedNotes(await getCollection("notes"));
 ---
 
-<PageLayout pageTitle={pageTitle} description={description}>
+<PageLayout pageTitle={pageTitle} description={description} icon="fa-solid fa-pencil">
     <ul>
         {
             items.map((item) => (
