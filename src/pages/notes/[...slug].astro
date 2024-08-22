@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/NoteLayout.astro";
+import Layout from "../../layouts/collections/NoteLayout.astro";
 
 export async function getStaticPaths() {
     const blogEntries = await getCollection("notes");
