@@ -1,14 +1,19 @@
 ---
 import BaseLayout from "../BaseLayout.astro";
 import GoLink from "@cmp/links/GoLink.astro";
-import FormattedDate from "@cmp/FormattedDate.astro";
+import fmtDate from "@lib/utils/fmtDate";
+
 const { notedate } = Astro.props;
+const fmtdate = fmtDate(notedate);
 ---
 
-<BaseLayout pageTitle=`laNote - ${notedate}`>
-    <h2>A note from <FormattedDate date={notedate} /></h2>
-    <GoLink go="/notes" displayText="see all notes" />
-    <blockquote style="scale: 2">
+<BaseLayout pageTitle=`laNote - ${fmtdate}`>
+    <h2>
+        <i class="fa-solid fa-pencil" style="margin-right: 5px;"></i>
+        An laNote from {fmtdate}...
+    </h2>
+    <blockquote style="font-size: 110%;">
         <slot />
     </blockquote>
+    <GoLink go="/notes" displayText="see all notes" />
 </BaseLayout>

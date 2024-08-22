@@ -1,0 +1,11 @@
+---
+interface Props {
+    back: string;
+}
+const { back } = Astro.props;
+---
+
+<div style="margin-top: 3px">
+    <i class="fa-solid fa-arrow-left" style="margin-right: 2px;"></i>
+    <a href={back}>back to {back}</a>
+</div>

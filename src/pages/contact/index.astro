@@ -1,5 +1,5 @@
 ---
-import PageLayout from "../../layouts/PageLayout.astro";
+import PageLayout from "@lay/PageLayout.astro";
 import GoLink from "@cmp/links/GoLink.astro";
 
 const pageTitle = "Contact";
@@ -7,17 +7,20 @@ const pageTitle = "Contact";
 
 <PageLayout
     pageTitle={pageTitle}
-    description="places"
+    description="Places you can find me on the internet (etc.) Also this page isnt finished"
     icon="fa-solid fa-address-card"
 >
     <h3>Email</h3>
     Email's 1. anything but dead and 2. the best way to get in touch with me
-    <ul>
+    <ul class="fa-ul">
         <li>
-            My personal email is <a href="mailto:la@laker.gay">la@laker.gay</a>
+            <i class="fa-li fa-solid fa-user"></i>
+            My personal email is
+            <a href="mailto:la@laker.gay">la@laker.gay</a>
             (<a href="/.well-known/pgp">🔑 PGP key available here</a>)
         </li>
         <li>
+            <i class="fa-li fa-solid fa-wrench"></i>
             My email for anything resembling professional work:
             <a href="mailto:hello@laker.tech">hello@laker.tech</a>
         </li>
@@ -28,7 +31,7 @@ const pageTitle = "Contact";
         <li>
             <i class="fa-li fa-brands fa-mastodon"></i>
             Mastodon:
-            <a href="//social.lol/@la">@la@social.lol </a>
+            <a href="//social.lol/@la">@la@social.lol</a>
         </li>
         <li></li>
     </ul>
@@ -42,6 +45,10 @@ const pageTitle = "Contact";
         </li>
     </ul>
     <hr />
-    <GoLink go="/contact/keys" displayText="Encryption keys" />
+    <GoLink
+        go="/contact/keys"
+        displayText="Encryption keys"
+        icon="fa-solid fa-key"
+    />
     <GoLink go="/contact/everything" displayText="Every account" />
 </PageLayout>

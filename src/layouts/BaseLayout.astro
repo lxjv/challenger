@@ -4,11 +4,11 @@ import HeadMeta from "@cmp/HeadMeta.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 
-const { pageTitle } = Astro.props;
+const { pageTitle, description } = Astro.props;
 ---
 
 <html lang="en">
-    <HeadMeta pageTitle={pageTitle} />
+    <HeadMeta pageTitle={pageTitle} description={description} />
     <body>
         <Header />
         <slot />

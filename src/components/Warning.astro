@@ -1,0 +1,38 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+    icon?: string;
+    text: string;
+}
+
+const { icon, text } = Astro.props;
+---
+
+<div class="under-constructio">
+    <span>
+        <Icon
+            li={false}
+            override={icon}
+            fallback="fa-solid fa-triangle-exclamation"
+        />
+        {text || "You forgot to set text here, Laker."}
+    </span>
+</div>
+
+<style>
+    div {
+        padding: 15px;
+        width: fit-content;
+        margin: 1em;
+        margin-left: 0;
+        background-color: light-dark(
+            var(--ctp-latte-red),
+            var(--ctp-mocha-yellow)
+        );
+        color: var(--text-colour-rev);
+    }
+    i {
+        margin-right: 10px;
+    }
+</style>

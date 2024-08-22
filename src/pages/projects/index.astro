@@ -4,10 +4,13 @@ import PostListMini from "@cmp/CollectionList.astro";
 import Button from "@cmp/links/Button.astro";
 
 const pageTitle = "Projects";
-const description =
-    "Stuff I've made. Mostly programming related.";
+const description = "Stuff I've made. Mostly programming related.";
 ---
 
-<PageLayout pageTitle={pageTitle} description={description}>
-    <PostListMini collection="projects"/>
+<PageLayout
+    pageTitle={pageTitle}
+    description={description}
+    icon="fa-solid fa-paperclip"
+>
+    <PostListMini collection="projects" />
 </PageLayout>

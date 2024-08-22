@@ -1,43 +1,51 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-const { pageTitle, description, back, icon } = Astro.props;
+import Warning from "@cmp/Warning.astro";
+import Back from "@cmp/links/Back.astro";
+
+const { pageTitle, description, back, icon, uc } = Astro.props;
+interface Props {
+    pageTitle: string;
+    description: string;
+    back: string;
+    icon: string;
+    uc: boolean;
+}
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} description={description}>
     <h2>
         {
-        () => {
-            if (icon) {
-                    return (
-                    <i
-                        class={icon}
-                        style="margin-right: 2px;"
-                    />
-                    );
+            () => {
+                if (icon) {
+                    return <i class={icon} style="margin-right: 2px;" />;
+                }
+                return null;
             }
-            return null;
         }
-    }
         {pageTitle}
     </h2>
 
     {
         () => {
             if (back) {
-                    return (
-                    <i
-                        class="fa-solid fa-arrow-left"
-                        style="margin-right: 2px;"
-                    />
-                    <a href={back}>
-                       back to {back}
-                    </a>
-                );
+                return <Back back={back} />;
             }
             return null;
         }
     }
 
     <blockquote>{description}</blockquote>
+
+    {
+        () => {
+            if (uc) {
+                return (
+                    <Warning text="This page is under construction, don't lose your towel!" />
+                );
+            }
+        }
+    }
+
     <slot />
 </BaseLayout>

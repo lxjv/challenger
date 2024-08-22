@@ -1,8 +1,8 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
-
 export default defineConfig({
   site: "https://laker.tech",
   image: {
@@ -11,7 +11,8 @@ export default defineConfig({
   redirects: {
     "/feed.xml": "/blog/feed.rss",
     "/collections": "/me/collections",
-    "/uses": "/me/uses"
+    "/uses": "/me/uses",
+    "/now": "/me/now"
   },
-  integrations: [react()]
+  integrations: [react(), mdx()]
 });

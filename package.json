@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "@astrojs/check": "^0.9.2",
+        "@astrojs/mdx": "^3.1.4",
         "@astrojs/react": "^3.6.2",
         "@astrojs/rss": "^4.0.7",
         "@types/react": "^18.3.3",
@@ -20,6 +21,7 @@
         "astro": "^4.14.2",
         "astro-og-image": "^1.0.7",
         "axios": "^1.7.4",
+        "h3": "^1.12.0",
         "markdown-it": "^14.1.0",
         "mdast-util-to-string": "^4.0.0",
         "preact": "^10.23.1",
