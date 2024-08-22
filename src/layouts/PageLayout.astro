@@ -4,13 +4,6 @@ import Warning from "@cmp/Warning.astro";
 import Back from "@cmp/links/Back.astro";
 
 const { pageTitle, description, back, icon, uc } = Astro.props;
-interface Props {
-    pageTitle: string;
-    description: string;
-    back: string;
-    icon: string;
-    uc: boolean;
-}
 ---
 
 <BaseLayout pageTitle={pageTitle} description={description}>
