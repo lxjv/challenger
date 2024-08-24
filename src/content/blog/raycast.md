@@ -43,5 +43,4 @@ For my to-do lists, I use Apple's built in reminders app. I wanted a quicker way
 
 ### Some more things I can only write a single line about
 
--   Visual Studio Code: has a Search Recent Projects command so whenever I need to open something in VSC, I can do it in 5 seconds.
--
+- Visual Studio Code: has a Search Recent Projects command so whenever I need to open something in VSC, I can do it in 5 seconds.

@@ -1,10 +1,13 @@
 ---
 import BaseLayout from "../BaseLayout.astro";
 import FormattedDate from "@cmp/FormattedDate.astro";
-const { frontmatter } = Astro.props;
+
+const { frontmatter, slug } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
+    <i class="fa-solid fa-arrow-left back"></i>
+    <a href="/blog" style="margin-bottom: 10px;">more blog posts</a>
     <div id="header-info">
         <h2>{frontmatter.title}</h2>
         <span class="date"><FormattedDate date={frontmatter.pubDate} /></span>
@@ -23,34 +26,56 @@ const { frontmatter } = Astro.props;
     </div>
 
     <slot />
+
+    <div class="box">
+        <span>
+            Enjoyed this post? Want to comment? <br />
+            <a
+                href=`mailto:blog+${slug}@laker.tech?subject=A%20reply%20to%20${frontmatter.title}`
+            >
+                Email me :)
+            </a> or <a href="/blog">read some more posts</a>
+        </span>
+    </div>
 </BaseLayout>
 
 <style>
+    .back {
+        padding-bottom: 0.6em;
+    }
+
     #header-info {
         display: flex;
         vertical-align: middle;
         gap: 1em;
     }
-    #header-info>span.date {
+    #header-info > span.date {
         margin-top: 5px;
     }
-    #header-info>h2 {
+    #header-info > h2 {
         margin-top: 0;
     }
+
     .tags {
         margin: 0.3em 0;
         display: flex;
         flex-wrap: wrap;
     }
     .tag {
-        border-radius: 30% 11%;
-        padding: 5px 12px;
-        
+        border-radius: 3em 2em;
+        padding: 5px 14px;
     }
     .tag:not(:last-child) {
         margin-right: 1em;
     }
     .tag > a {
         color: var(--text-colour-rev);
+    }
+
+    #page-foot {
+        padding: var(--padding-def) 2em;
+        border: 2px solid var(--accent);
+        border-radius: 1em 3em;
+        width: fit-content;
     }
 </style>
