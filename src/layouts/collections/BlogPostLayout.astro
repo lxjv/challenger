@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../BaseLayout.astro";
 import FormattedDate from "@cmp/FormattedDate.astro";
+import Warning from "@cmp/Warning.astro";
+import { Image } from "astro:assets";
 
 const { frontmatter, slug } = Astro.props;
 ---
@@ -24,6 +26,14 @@ const { frontmatter, slug } = Astro.props;
             ))
         }
     </div>
+
+    {
+        () => {
+            if (frontmatter.cw) {
+                return <Warning>{frontmatter.cw}</Warning>;
+            }
+        }
+    }
 
     <slot />
 

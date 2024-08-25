@@ -5,6 +5,9 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
     site: "https://laker.tech",
+    redirects: {
+        "/now": "/now",
+    },
     image: {
         domains: ["cdn.laker.tech"],
     },

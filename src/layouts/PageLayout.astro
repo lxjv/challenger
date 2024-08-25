@@ -34,7 +34,9 @@ const { pageTitle, description, back, icon, uc } = Astro.props;
         () => {
             if (uc) {
                 return (
-                    <Warning text="This page is under construction, don't lose your towel!" />
+                    <Warning>
+                        This page is under construction, don't lose your towel!
+                    </Warning>
                 );
             }
         }

@@ -29,7 +29,7 @@
         system-ui, sans-serif;
     --font-prose: "OpenDyslexic", "Atkinson Hyperlegible", "IBM Plex Sans",
         system-ui, sans-serif;
-    --font-code: "IBM Plex Mono";
+    --font-code: "IBM Plex Mono", monospace;
 
     --padding-def: 1.24em;
 }

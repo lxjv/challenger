@@ -3,20 +3,19 @@ import Icon from "./Icon.astro";
 
 interface Props {
     icon?: string;
-    text: string;
 }
 
-const { icon, text } = Astro.props;
+const { icon } = Astro.props;
 ---
 
-<div class="under-constructio">
+<div>
     <span>
         <Icon
             li={false}
             override={icon}
             fallback="fa-solid fa-triangle-exclamation"
         />
-        {text || "You forgot to set text here, Laker."}
+        <slot />
     </span>
 </div>
 

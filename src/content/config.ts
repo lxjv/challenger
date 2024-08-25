@@ -13,11 +13,12 @@ const postsCollection = defineCollection({
         author: z.string().default("Laker Turner"),
         image: z
             .object({
-                url: z.string(),
+                src: z.string(),
                 alt: z.string(),
             })
             .optional(),
         tags: z.array(z.string()),
+        cw: z.string().optional(),
     }),
 });
 
@@ -38,11 +39,14 @@ const projectsCollection = defineCollection({
         title: z.string(),
         pubDate: z.date().optional(),
         description: z.string().default("no description"),
-        url: z.object({
-            source: z.string().url(),
-            external: z.string().url(),
-        }).optional(),
-        image: z.object({
+        url: z
+            .object({
+                source: z.string().url(),
+                external: z.string().url(),
+            })
+            .optional(),
+        image: z
+            .object({
                 url: z.string(),
                 alt: z.string(),
             })
