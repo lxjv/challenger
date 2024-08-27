@@ -21,11 +21,17 @@ import Layout from "@lay/PageLayout.astro";
     <h3 id="meta">/meta</h3>
     <ul class="fa-ul">
         <li>
-            <i class="fa-li fa-solid fa-code-branch"></i>
+            <i
+                class="fa-li fa-solid fa-code-branch"
+                style="color: light-dark(var(--ctp-latte-red), var(--ctp-mocha-red));"
+            ></i>
             <a href="/meta/changelog">/changelog</a>, updates with this site.
         </li>
         <li>
-            <i class="fa-li fa-solid fa-wand-magic-sparkles"></i>
+            <i
+                class="fa-li fa-solid fa-wand-magic-sparkles"
+                style="color: light-dark(var(--ctp-latte-red), var(--ctp-mocha-red));"
+            ></i>
             <a href="/meta/colophon">/colophon</a>, how this site is made.
         </li>
         <li>
@@ -39,12 +45,3 @@ import Layout from "@lay/PageLayout.astro";
         <li>/about</li>
     </ul>
 </Layout>
-
-<style>
-    .fa-code-branch {
-        color: light-dark(var(--ctp-latte-red), var(--ctp-mocha-red));
-    }
-    .fa-wand-magic-sparkles {
-        color: light-dark(var(--ctp-latte-green), var(--ctp-mocha-green));
-    }
-</style>
