@@ -30,7 +30,7 @@ import Layout from "@lay/PageLayout.astro";
         <li>
             <i
                 class="fa-li fa-solid fa-wand-magic-sparkles"
-                style="color: light-dark(var(--ctp-latte-red), var(--ctp-mocha-red));"
+                style="color: light-dark(var(--ctp-latte-green), var(--ctp-mocha-green))"
             ></i>
             <a href="/meta/colophon">/colophon</a>, how this site is made.
         </li>
@@ -44,4 +44,11 @@ import Layout from "@lay/PageLayout.astro";
     <ul>
         <li>/about</li>
     </ul>
-</Layout>
+</Layout><style>
+    .fa-code-branch {
+        color: light-dark(var(--ctp-latte-red), var(--ctp-mocha-red));
+    }
+    .fa-wand-magic-sparkles {
+        color: light-dark(var(--ctp-latte-green), var(--ctp-mocha-green));
+    }
+</style>
