@@ -6,7 +6,6 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
     site: "https://laker.tech",
     redirects: {
-        "/now": "/now",
     },
     image: {
         domains: ["cdn.laker.tech"],
