@@ -1,38 +1,7 @@
+@import url(./vars.css);
 @import url(https://cdn.laker.tech/blog/style/reset.css);
-@import url(https://cdn.laker.tech/blog/style/ctp.css);
 @import url(https://cdn.laker.tech/blog/style/util.css);
-
 @import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400,700i|ibm-plex-sans:300,300i,400,400i,500,500i,700,700i);
-
-:root {
-    color-scheme: light dark;
-
-    --accent: light-dark(var(--ctp-latte-red), var(--ctp-mocha-lavender));
-
-    --lm-background: var(--ctp-latte-base);
-    --dm-background: var(--ctp-mocha-crust);
-
-    --lm-textcol: var(--ctp-latte-text);
-    --dm-textcol: var(--ctp-mocha-text);
-    --lm-linkcol: var(--ctp-latte-subtext1);
-    --dm-linkcol: var(--ctp-mocha-subtext1);
-
-    --background: light-dark(var(--lm-background), var(--dm-background));
-    --text-colour: light-dark(var(--lm-textcol), var(--dm-textcol));
-    --text-colour-rev: light-dark(
-        var(--ctp-latte-base),
-        var(--ctp-mocha-crust)
-    );
-    --link-colour: light-dark(var(--lm-linkcol), var(--dm-linkcol));
-
-    --font-title: "OpenDyslexic", "Atkinson Hyperlegible", "IBM Plex Sans",
-        system-ui, sans-serif;
-    --font-prose: "OpenDyslexic", "Atkinson Hyperlegible", "IBM Plex Sans",
-        system-ui, sans-serif;
-    --font-code: "IBM Plex Mono", monospace;
-
-    --padding-def: 1.24em;
-}
 
 html {
     background: var(--background);
@@ -40,12 +9,13 @@ html {
     font-family: var(--font-prose);
     font-weight: 400;
     line-height: 105%;
-    font-size: 110%;
+    font-size: 1.15rem;
 }
 
 body {
     width: fit-content;
     max-width: 80%;
+    padding: calc(var(--padding-def) / 2) calc(var(--padding-def) * 2);
 }
 
 @media (max-width: 35rem) {
@@ -64,6 +34,9 @@ a:hover,
 a:active {
     color: var(--accent);
 }
+a:visited {
+    text-decoration: wavy light-dark;
+}
 
 a[href*='//']::after
 {
@@ -73,17 +46,6 @@ a[href*='//']::after
 
 .footnote-ref > a {
     text-decoration: none;
-}
-
-body {
-    padding: calc(var(--padding-def) / 2) calc(var(--padding-def) * 2);
-}
-
-#content {
-    padding: 0.62em;
-    padding-left: 0;
-    width: fit-content;
-    max-width: 75%;
 }
 
 li {
@@ -164,10 +126,6 @@ hr {
     margin: 1em 0;
     text-align: center;
     height: 5px;
-}
-
-ul.a {
-    list-style: square url("/cdn/image/Five_Pointed_Star_Solid.svg");
 }
 
 img {

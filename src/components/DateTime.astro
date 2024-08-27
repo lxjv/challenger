@@ -1,4 +1,6 @@
 ---
+import fmtDate from '@lib/utils/fmtDate';
+
 interface Props {
     date: Date;
 }
@@ -7,5 +9,5 @@ const { date } = Astro.props;
 ---
 
 <time datetime={date.toISOString()}>
-    {date.toISOString().slice(0, 10) || "no date"}
+    {fmtDate(date)}
 </time>

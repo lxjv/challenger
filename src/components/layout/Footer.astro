@@ -1,6 +1,8 @@
 ---
-import Social from "../Social.astro";
-import FlavourText from "../FlavourText.astro";
+import Social from "../links/Social.astro";
+import FlavourText from "./partials/FlavourText.astro";
+import Webring from "./partials/Webring.astro";
+import webrings from "@data/webrings.json";
 ---
 
 <footer style="margin-top: 2em;">
@@ -33,6 +35,9 @@ import FlavourText from "../FlavourText.astro";
 
 <style>
     #2 > a:not(:last-child) {
+        margin-right: 1em;
+    }
+    #3 > span:not(:last-child) {
         margin-right: 1em;
     }
 </style>
