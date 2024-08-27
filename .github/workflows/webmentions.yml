@@ -3,6 +3,9 @@ name: Webmentions
 on:
   schedule:
     - cron: '*/30 * * * *'
+  push:
+    branches:
+        - main
 
 jobs:
   webmentions:
