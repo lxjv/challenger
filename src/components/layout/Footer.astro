@@ -1,43 +1,24 @@
 ---
 import Social from "../links/Social.astro";
 import FlavourText from "./partials/FlavourText.astro";
-import Webring from "./partials/Webring.astro";
-import webrings from "@data/webrings.json";
 ---
 
 <footer style="margin-top: 2em;">
-    <div id="1">
-        <p>
-            Made with <i
-                class="fa-solid fa-heart fa-beat"
-                style="
-                    color: light-dark(var(--ctp-latte-red), var(--ctp-mocha-red));
-                    --fa-animation-duration: 1800s;
-                "
-            ></i> in [very] rainy England.
-        </p>
-        <div id="2">
-            <Social
-                platform="github.com"
-                username="lxjv"
-                displayText="GitHub"
-            />
-            <Social platform="laker.lol" username="" displayText="laker.lol" />
-            <Social
-                platform="github.com"
-                username="lxjv/challenger"
-                displayText="View source code"
-            />
-        </div>
+    <div id="2">
+        <Social platform="laker.tech" username="meta/others" displayText="Webrings" />
+        <Social platform="github.com" username="lxjv" displayText="GitHub" />
+        <Social platform="laker.lol" username="" displayText="laker.lol" />
+        <Social
+            platform="github.com"
+            username="lxjv/challenger"
+            displayText="View source code"
+        />
     </div>
     <FlavourText />
 </footer>
 
 <style>
     #2 > a:not(:last-child) {
-        margin-right: 1em;
-    }
-    #3 > span:not(:last-child) {
         margin-right: 1em;
     }
 </style>

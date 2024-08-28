@@ -2,8 +2,8 @@
 import BaseLayout from "./BaseLayout.astro";
 import Warning from "@cmp/Warning.astro";
 import Back from "@cmp/links/Back.astro";
-
-const { pageTitle, description, back, icon, uc } = Astro.props;
+import DateTime from "@cmp/DateTime.astro";
+const { pageTitle, description, back, icon, uc, lastUpdated } = Astro.props;
 ---
 
 <BaseLayout pageTitle={pageTitle} description={description}>
@@ -17,6 +17,14 @@ const { pageTitle, description, back, icon, uc } = Astro.props;
             }
         }
         {pageTitle}
+        {
+            () => {
+                if (lastUpdated) {
+                    return <small>Last updated: <DateTime date={lastUpdated} /></small>;
+                }
+                return null;
+            }
+        }
     </h2>
 
     {
