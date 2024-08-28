@@ -1,6 +1,7 @@
 ---
 import Layout from "./PageLayout.astro";
 const { frontmatter: f } = Astro.props;
+const fixedDate = new Date(f.lastUpdated)
 ---
 
 <Layout
@@ -9,7 +10,7 @@ const { frontmatter: f } = Astro.props;
     back={f.back}
     icon={f.icon}
     uc={f.uc}
-    lastUpdated={f.lastUpdated}
+    lastUpdated={fixedDate}
 >
     <slot />
 </Layout>
