@@ -3,7 +3,7 @@ name: Webmentions
 on:
   push:
     branches:
-        - main
+        - disabled
 
 jobs:
   webmentions:
