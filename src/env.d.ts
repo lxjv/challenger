@@ -4,6 +4,7 @@
 interface ImportMetaEnv {
     readonly LFM_API_KEY: string;
     readonly LFM_USER: string;
+    readonly WEBMENTION_API_KEY: string;
     // more env variables...
 }
 

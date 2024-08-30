@@ -3,15 +3,15 @@ import Icon from "@cmp/utils/Icon.astro";
 
 const { go, displayText, icon } = Astro.props;
 interface Props {
-    go: string
-    displayText: string
-    icon?: string
+    go: string;
+    displayText: string;
+    icon?: string;
 }
 ---
 
 <ul class="fa-ul">
     <li>
         <Icon override={icon} fallback="fa-solid fa-arrow-right" li={true} />
-        <a href={go}> {displayText}</a>
+        <a href={go}><slot /></a>
     </li>
 </ul>

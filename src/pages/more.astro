@@ -5,12 +5,13 @@ import Layout from "@lay/PageLayout.astro";
 <Layout
     pageTitle="Everything else"
     description="All the pages that aren't in the header"
+    icon="fa-solid fa-bars"
 >
     <h3 id="me">/me</h3>
     <ul class="fa-ul">
         <li>
             <i class="fa-li fa-solid fa-toolbox"></i>
-            <a href="/me/uses">/uses</a>, what I use, if you want to know
+            <a href="/uses">/uses</a>, what I use, if you want to know
         </li>
         <li>
             <i class="fa-li fa-solid fa-clipboard"></i>
@@ -22,10 +23,11 @@ import Layout from "@lay/PageLayout.astro";
     <ul class="fa-ul">
         <li>
             <i
-                class="fa-li fa-solid fa-code-branch"
-                style="color: light-dark(var(--ctp-latte-red), var(--ctp-mocha-red));"
+                class="fa-li fa-solid fa-globe"
+                style="color: light-dark(var(--ctp-latte-blue), var(--ctp-mocha-blue));"
             ></i>
-            <a href="/meta/changelog">/changelog</a>, updates with this site.
+            <a href="/meta/others">/others</a>, webrings, buttons and all other
+            manners of fun things
         </li>
         <li>
             <i
@@ -46,9 +48,5 @@ import Layout from "@lay/PageLayout.astro";
             <a href="/meta/subscribe">/subscribe</a>, all of this site's RSS
             feeds.
         </li>
-    </ul>
-    <h3>Stuff that doesn't exist right now, but eventually will</h3>
-    <ul>
-        <li>/about</li>
     </ul>
 </Layout>

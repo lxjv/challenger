@@ -17,7 +17,11 @@ export const siteConfig = {
         email: "la@laker.gay",
         photo: {
             url: "https://cdn.laker.tech/images/tree.png",
-            alt: "welcome to the club",
+            alt: "A cartoon tree with yellow boots on.",
+            size: {
+                h: "140",
+                w: "120"
+            }
         },
     },
     devMode: {

@@ -1,0 +1,47 @@
+---
+import { siteConfig as sc } from "@lib/siteConfig";
+---
+
+<div class="h-card">
+    <p class="name">{sc.author.name}</p>
+    <p class="pronouns">she/her</p>
+    <img
+        src={sc.author.photo.url}
+        alt={sc.author.photo.alt}
+        width={sc.author.photo.size.w}
+        height={sc.author.photo.size.h}
+    />
+    <ul class="fa-ul">
+        <li>
+            <i class="fa-li fa-solid fa-globe"></i>
+            🇬🇧 England, UK
+        </li>
+        <li>
+            Links:
+            <ul>
+                <li><a href={sc.author.link} rel="me">laker.tech (here)</a></li>
+            </ul>
+        </li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<style>
+    div {
+        max-width: 200px;
+        padding: 1em 2em;
+        background-color: var(--ctp-mocha-mantle);
+        border: 1px var(--accent) solid;
+        display: flex;
+        vertical-align: middle;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    img {
+        border: 0;
+    }
+</style>
