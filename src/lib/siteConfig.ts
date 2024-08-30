@@ -17,11 +17,11 @@ export const siteConfig = {
         email: "la@laker.gay",
         line: "this is a test string",
         photo: {
-            url: "https://cdn.laker.tech/images/tree.png",
+            url: "https://cdn.laker.tech/images/hat.jpg",
             alt: "A cartoon tree with yellow boots on.",
             size: {
                 h: "140",
-                w: "120"
+                w: "140"
             }
         },
     },

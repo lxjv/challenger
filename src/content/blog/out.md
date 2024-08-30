@@ -14,7 +14,9 @@ Almost 3 years ago, on the 26th of August 2019, at 1:29 am, I came out as non-bi
 
 I had already come out as bi a year earlier so luckily I didn't also have that to deal with.
 
-But the term “non-binary” never truly fit me. It felt like a patchwork over a hole that needed to be filled. It wasn’t a true representation of me.
+But the term “non-binary” never truly fit me. It felt like a patchwork over a hole that needed to be filled. 
+
+It wasn’t a true representation of me.
 
 ## The Present
 

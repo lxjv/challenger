@@ -4,8 +4,8 @@ import { siteConfig as sc } from "@lib/siteConfig";
 
 <div class="h-card">
     <p>
-        <span class="p-name">{sc.author.name}</span>
-        (<span class="p-pronouns">she/her</span>)
+        <b><span class="p-name">{sc.author.name}</span></b>
+        (<b><span class="p-pronouns">she/her</span></b>)
     </p>
     <img
         class="u-photo"
@@ -68,11 +68,11 @@ import { siteConfig as sc } from "@lib/siteConfig";
     }
 
     img {
-        border: 0;
         display: block; /* Make the image a block element */
         margin: 0 auto;
     }
+
     .u-url::after {
-        content: null;
+        content: none;
     }
 </style>

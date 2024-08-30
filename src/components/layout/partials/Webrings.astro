@@ -4,7 +4,42 @@ import rings from "@data/webrings.json";
 ---
 
 <ul>
-    {rings.map((ring) => <Webring ring={ring} />)}
+    {
+        rings.map((ring) => (
+            <li>
+                <a class="name" href={ring.link}>
+                    {ring.name}
+                </a>
+
+                <a class="back" href={ring.prev}>
+                    back
+                </a>
+                <a class="next" href={ring.next}>
+                    next
+                </a>
+
+                {() => {
+                    if (ring.random) {
+                        return (
+                            <a class="random" href={ring.random}>
+                                random
+                            </a>
+                        );
+                    }
+                }}
+            </li>
+        ))
+    }
 </ul>
 
-<style></style>
+<style>
+    li {
+        text-align: justify;
+    }
+    li > a.name {
+        margin-right: 1em;
+    }
+    a::after {
+        content: none;
+    }
+</style>

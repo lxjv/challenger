@@ -20,7 +20,7 @@
       ]
     },
     "jsx": "react-jsx",
-    "jsxImportSource": "react",
+    "jsxImportSource": "preact",
     "strictNullChecks": true,
     "allowJs": true
   }

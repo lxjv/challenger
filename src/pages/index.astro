@@ -1,53 +1,40 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Infobox from "@cmp/indieweb/Infobox.astro";
+import Greeting from "@cmp/layout/partials/Greeting.astro"
 const pageTitle = "Home";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <span
-        class="h-card center"
-        style="justify-content:left; flex-wrap: flex-reverse"
-    >
-        <p style="margin-top: 0;">
-            Hi! I'm an 18 year old music student from the UK, <br />
-            writer, amateur programmer and leather jacket enthusiast.
-        </p>
+    <div style="display: flex;">
+        <div>
+            <Greeting />
+            <p>
+                Hi! I'm Laker, an 18 year old music student from the UK, writer,
+                programmer <br />
+                and leather jacket enthusiast.
+            </p>
 
-        <img
-            style="margin-left: 2em;"
-            class="u-photo profile-picture"
-            height="160"
-            width="160"
-            src="https://cdn.laker.tech/images/hat.jpg"
-            alt="A black baseball cap with Keith Haring's 'Untitled, 1982' embroidered on it."
-        />
-    </span>
+            <p>
+                I've been creative my entire life, but started writing to clear
+                my head, about 3 years ago.
+            </p>
 
-    <p>
-        I've been creative my entire life, but started writing to clear my head,
-        about 3 years ago.
-    </p>
+            <p>
+                I'm learning a mix of <b>Rust</b> and <b>Typescript</b> right now,
+                but I'm probably going to stick with Rust. <br />
+                On the web side, I like <b>Astro</b> (it's what builds this site!), and <b>Eleventy</b> (what I use for everything else).
+            </p>
 
-    <p>
-        I'm learning a mix of <b>Rust</b> and <b>Typescript</b> right now, but I'm
-        probably going to stick with Rust. <br />
-        On the web side, I like <b>Eleventy</b> (it's what builds this site!).
-    </p>
+            <p>
+                When I'm not knee-deep in my terminal, I like making music,
+                taking photographs <br />
+                and reading <strong>Hitch-Hiker's Guide to the Galaxy</strong> for
+                the 5th time.
+            </p>
 
-    <p>
-        When I'm not knee-deep in my terminal, I like making music, taking
-        photographs <br />
-        and reading <strong>Hitch-Hiker's Guide to the Galaxy</strong> for the 5th
-        time.
-    </p>
-
-    <p>Feel free to walk around and see what's going on.</p>
-
-    <p>
-        If you want to keep in touch with me outside of this site, <br />
-        I'm on the fediverse as <a href="https://social.lol/@la"
-            >@la@social.lol</a
-        >
-        or email me at <a href="mailto:hello@laker.tech">hello@laker.tech</a>!
-    </p>
+            <p>Feel free to walk around and see what's going on.</p>
+        </div>
+        <Infobox />
+    </div>
 </BaseLayout>

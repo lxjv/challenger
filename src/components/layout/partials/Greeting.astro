@@ -1,0 +1,8 @@
+---
+import ft from "@data/flavourtext.json";
+import { getRandomItem } from "@lib/filters/getRandom";
+---
+
+<h3 style="margin-bottom: 0.8em;">
+    {getRandomItem(ft.greetings)}! Welcome to my website.
+</h3>

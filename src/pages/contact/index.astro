@@ -9,7 +9,7 @@ const pageTitle = "Contact";
     pageTitle={pageTitle}
     description="Places you can find me on the internet (etc.)"
     icon="fa-solid fa-address-card"
-    uc=true
+    uc="true"
 >
     <h3>Email</h3>
     Email's 1. anything but dead and 2. the best way to get in touch with me
@@ -46,10 +46,6 @@ const pageTitle = "Contact";
         </li>
     </ul>
     <hr />
-    <GoLink
-        go="/contact/keys"
-        displayText="Encryption keys"
-        icon="fa-solid fa-key"
-    />
-    <GoLink go="/contact/everything" displayText="Every account" />
+    <GoLink go="/contact/keys" icon="fa-solid fa-key">Encryption keys</GoLink>
+    <GoLink go="/contact/everything">Every account</GoLink>
 </PageLayout>

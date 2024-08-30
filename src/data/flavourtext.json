@@ -28,5 +28,11 @@
         "Trans rights are human rights!",
         ":wq",
         "Where's that utopia, the one I promised you? -- Yard Act"
+    ],
+    "greetings": [
+        "Hello",
+        "Hola",
+        "Bonjour",
+        "Heya"
     ]
 }
