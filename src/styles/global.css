@@ -42,7 +42,7 @@ html {
 
 body {
     width: fit-content;
-    max-width: 80%;
+    max-width: 90%;
     padding: calc(var(--padding-def) / 2) calc(var(--padding-def) * 2);
 }
 

@@ -14,7 +14,7 @@ import { siteConfig as sc } from "@lib/siteConfig";
         width={sc.author.photo.size.w}
         height={sc.author.photo.size.h}
     />
-    <p class="p-note">{sc.author.line}</p>
+    <p class="p-note nd">{sc.author.line}</p>
     <ul class="fa-ul">
         <li>
             <i class="fa-li fa-solid fa-globe"></i>
@@ -39,15 +39,14 @@ import { siteConfig as sc } from "@lib/siteConfig";
                 </li>
                 <li>
                     <i class="fa-li fa-solid fa-bread"></i>
-                    <a href="" rel="me"></a>
+                    <a href="//social.lol/@la" rel="me">@la@social.lol</a>
                 </li>
             </ul>
         </li>
         <li>
             <i class="fa-li fa-solid fa-at"></i>
-            <a href=`mailto:${sc.author.email}`>{sc.author.email}</a>
+            <a href=`mailto:${sc.author.email}` class="u-email">{sc.author.email}</a>
         </li>
-        <li></li>
     </ul>
 </div>
 
@@ -55,8 +54,12 @@ import { siteConfig as sc } from "@lib/siteConfig";
     div {
         max-width: fit-content;
         padding: 1em 2em;
+        margin: 0 1em;
+
         background-color: var(--ctp-mocha-mantle);
+
         border: 1px var(--accent) solid;
+        border-radius: 1em 3em;
     }
 
     p {
@@ -68,5 +71,8 @@ import { siteConfig as sc } from "@lib/siteConfig";
         border: 0;
         display: block; /* Make the image a block element */
         margin: 0 auto;
+    }
+    .u-url::after {
+        content: null;
     }
 </style>
