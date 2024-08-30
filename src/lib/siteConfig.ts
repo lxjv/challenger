@@ -15,6 +15,7 @@ export const siteConfig = {
         name: "Laker Turner",
         link: "https://laker.tech",
         email: "la@laker.gay",
+        line: "this is a test string",
         photo: {
             url: "https://cdn.laker.tech/images/tree.png",
             alt: "A cartoon tree with yellow boots on.",
