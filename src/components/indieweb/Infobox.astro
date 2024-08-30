@@ -3,8 +3,10 @@ import { siteConfig as sc } from "@lib/siteConfig";
 ---
 
 <div class="h-card">
-    <p class="name">{sc.author.name}</p>
-    <p class="pronouns">she/her</p>
+    <p>
+        <span class="p-name">{sc.author.name}</span>
+        (<span class="p-pronouns">she/her</span>)
+    </p>
     <img
         class="u-photo"
         src={sc.author.photo.url}
@@ -12,38 +14,59 @@ import { siteConfig as sc } from "@lib/siteConfig";
         width={sc.author.photo.size.w}
         height={sc.author.photo.size.h}
     />
-    <p class="p-note">test</p>
+    <p class="p-note">{sc.author.line}</p>
     <ul class="fa-ul">
         <li>
             <i class="fa-li fa-solid fa-globe"></i>
             🇬🇧 England, UK
         </li>
         <li>
+            <i class="fa-li fa-solid fa-truck-fast"></i>
             Links:
             <ul>
-                <li><a href={sc.author.link} class="u-url" rel="me">laker.tech (here)</a></li>
+                <li>
+                    <a href={sc.author.link} class="u-url" rel="me">
+                        laker.tech (here)
+                    </a>
+                </li>
+                <li>
+                    <i class="fa-li fa-solid fa-bread"></i>
+                    <a href="//laker.lol" rel="me">laker.lol</a>
+                </li>
+                <li>
+                    <i class="fa-li fa-solid fa-bread"></i>
+                    <a href="//github.com/lxjv" rel="me">GitHub</a>
+                </li>
+                <li>
+                    <i class="fa-li fa-solid fa-bread"></i>
+                    <a href="" rel="me"></a>
+                </li>
             </ul>
         </li>
-        <li></li>
+        <li>
+            <i class="fa-li fa-solid fa-at"></i>
+            <a href=`mailto:${sc.author.email}`>{sc.author.email}</a>
+        </li>
         <li></li>
     </ul>
 </div>
 
 <style>
     div {
-        max-width: 200px;
+        max-width: fit-content;
         padding: 1em 2em;
         background-color: var(--ctp-mocha-mantle);
         border: 1px var(--accent) solid;
-        display: flex;
-        vertical-align: middle;
     }
 
     p {
         margin: 10px 0;
+        text-align: center;
     }
 
     img {
         border: 0;
+        display: block; /* Make the image a block element */
+        margin: 0 auto;
     }
 </style>
