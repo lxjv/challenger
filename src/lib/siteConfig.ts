@@ -18,11 +18,11 @@ export const siteConfig = {
         line: "this is a test string",
         photo: {
             url: "https://cdn.laker.tech/images/hat.jpg",
-            alt: "A cartoon tree with yellow boots on.",
+            alt: "A black baseball cap with Keith Haring's 'Untitled, 1982' embroidered on it.",
             size: {
                 h: "140",
-                w: "140"
-            }
+                w: "140",
+            },
         },
     },
     devMode: {
