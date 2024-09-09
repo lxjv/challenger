@@ -6,7 +6,7 @@ const pageTitle = "Home";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div style="display: flex;">
+    <div id="main">
         <div>
             <Greeting />
             <p>
@@ -36,6 +36,22 @@ const pageTitle = "Home";
 
             <p>Feel free to walk around and see what's going on.</p>
         </div>
-        <Infobox />
+        <Infobox id="info" />
     </div>
 </BaseLayout>
+
+<style>
+    #main {
+        display: flex;
+    }
+
+    @media (max-width: 35rem) {
+        #main {
+            display: block;
+        }
+        #info {
+            margin: 0;
+            margin-top: 1em;
+        }
+    } 
+</style>
