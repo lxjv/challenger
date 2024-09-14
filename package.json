@@ -3,7 +3,7 @@
     "type": "module",
     "version": "0.0.1",
     "scripts": {
-        "build": "./src/lib/indie/webmentions.js && astro check && astro build",
+        "build": "node ./src/lib/indie/webmentions.js && astro check && astro build",
         "dev": "astro dev",
         "start": "astro dev",
         "build:nowm": "astro check && astro build",
