@@ -21,12 +21,17 @@ import { siteConfig as sc } from "@lib/siteConfig";
             🇬🇧 England, UK
         </li>
         <li>
+            <i class="fa-li fa-solid fa-cake-candles"></i>
+            Age: <span class="p-age">18</span> <br>
+            (<span class="p-birthday">2005-10-16</span>)
+        </li>
+        <li>
             <i class="fa-li fa-solid fa-truck-fast"></i>
             Links:
             <ul>
-                <li>
+                <li class="nd">
                     <a href={sc.author.link} class="u-url" rel="me">
-                        laker.tech (here)
+                        laker.tech
                     </a>
                 </li>
                 <li>
@@ -45,7 +50,9 @@ import { siteConfig as sc } from "@lib/siteConfig";
         </li>
         <li>
             <i class="fa-li fa-solid fa-at"></i>
-            <a href=`mailto:${sc.author.email}` class="u-email">{sc.author.email}</a>
+            <a href=`mailto:${sc.author.email}` class="u-email"
+                >{sc.author.email}</a
+            >
         </li>
     </ul>
 </div>
@@ -57,7 +64,10 @@ import { siteConfig as sc } from "@lib/siteConfig";
         padding: 1em 2em;
         margin: 0 1em;
 
-        background-color: light-dark(var(--ctp-latte-crust), var(--ctp-mocha-crust));
+        background-color: light-dark(
+            var(--ctp-latte-crust),
+            var(--ctp-mocha-crust)
+        );
 
         border: 3px var(--accent) solid;
         border-radius: 1em 3em;

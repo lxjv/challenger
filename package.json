@@ -1,11 +1,12 @@
 {
-    "name": "la-astro",
+    "name": "challenger",
     "type": "module",
     "version": "0.0.1",
     "scripts": {
+        "build": "./src/lib/indie/webmentions.js && astro check && astro build",
         "dev": "astro dev",
         "start": "astro dev",
-        "build": "astro check && astro build",
+        "build:nowm": "astro check && astro build",
         "preview": "astro preview",
         "astro": "astro",
         "fmt": "pnpm exec prettier . --write"

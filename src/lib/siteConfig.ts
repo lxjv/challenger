@@ -15,7 +15,7 @@ export const siteConfig = {
         name: "Laker Turner",
         link: "https://laker.tech",
         email: "la@laker.gay",
-        line: "this is a test string",
+        line: "",
         photo: {
             url: "https://cdn.laker.tech/images/hat.jpg",
             alt: "A black baseball cap with Keith Haring's 'Untitled, 1982' embroidered on it.",

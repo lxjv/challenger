@@ -1,7 +1,10 @@
 ---
 import Layout from "./PageLayout.astro";
 const { frontmatter: f } = Astro.props;
-const fixedDate = new Date(f.lastUpdated)
+let fixedDate: Date 
+if (f.lastUpdated) {
+    fixedDate = new Date(f.lastUpdated)
+}
 ---
 
 <Layout

@@ -1,0 +1,29 @@
+---
+import Box from "@cmp/Box.astro"
+import FormattedDate from "@cmp/DateTime.astro";
+
+import { getCollection } from "astro:content";
+import { getPublishedAndSortedPosts } from "@lib/utils/drafts";
+import { getFirst } from "@lib/filters/arrays";
+
+const items = getPublishedAndSortedPosts(await getCollection("blog"));
+const first = getFirst(items)
+---
+
+<Box title="Latest blog post">
+    {
+        items.map((item) => (
+            <li>
+                <FormattedDate date={item.data.pubDate} /> —
+                <>
+                    <a href={`/blog/${item.slug}`}>
+                        {item.data.title}
+                    </a>
+                </>
+                <blockquote style="margin: 10px 0 1em 15px;">
+                    {item.data.description}
+                </blockquote>
+            </li>
+        ))
+    }
+</Box>
