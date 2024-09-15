@@ -34,6 +34,7 @@ function fetchWebmentions() {
 }
 
 function writeWebMention(webmention) {
+    fs.mkdir("./.cache/webmentions")
     // Each post will have its own webmentions json file, named after the slug
     const slug = webmention['wm-target']
         .replace(`https://${DOMAIN}/`, '')
