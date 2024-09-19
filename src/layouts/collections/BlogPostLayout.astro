@@ -12,7 +12,9 @@ const { frontmatter, slug } = Astro.props;
     <a href="/blog" style="margin-bottom: 10px;">more blog posts</a>
     <div id="header-info">
         <h2>{frontmatter.title}</h2>
-        <span class="date"><FormattedDate date={frontmatter.pubDate} /></span>
+        <span class="date"
+            >Published <FormattedDate date={frontmatter.pubDate} /></span
+        >
     </div>
 
     <blockquote><em>{frontmatter.description}</em></blockquote>
@@ -36,6 +38,8 @@ const { frontmatter, slug } = Astro.props;
     }
 
     <slot />
+
+    <span class="center">💜</span>
 
     <Box>
         Enjoyed this post? Want to comment? <br />
