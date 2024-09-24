@@ -1,3 +1,8 @@
 # Challenger - laker.tech version 7
 
-its built in astro and uses pnpm
+## Setup dev environment
+
+```bash
+pnpm i 
+pnpm run dev
+```
