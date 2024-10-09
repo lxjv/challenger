@@ -1,7 +1,7 @@
-@import url(https://cdn.laker.tech/blog/style/reset.css);
-@import url(https://cdn.laker.tech/blog/style/util.css);
+@import url(https://cdn.laker.tech/web/css/reset.css);
+@import url(https://cdn.laker.tech/web/css/util.css);
 @import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400,700i|ibm-plex-sans:300,300i,400,400i,500,500i,700,700i);
-@import url(https://cdn.laker.tech/blog/style/ctp.css);
+@import url(https://cdn.laker.tech/web/css/ctp.css);
 
 :root {
     color-scheme: light dark;
